@@ -1,2 +1,7 @@
-# KILL-BACKGROUND
-what happens sometimes is that we exausted while removing background from some nonsense applications, so here we go
+from rembg import remove
+from PIL import Image
+input_path = 'imagepath.JPG'  #replace 'imagepath.JPG; with your actual reference image path
+output_path = 'output.png'
+input = Image.open(input_path)
+output = remove(input)
+output.save(output_path)
